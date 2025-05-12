@@ -1,8 +1,7 @@
-Great! Here's an updated version of the `README.md` that reflects your **current use of React + Bootstrap** and a **basic project structure**, while still laying the groundwork for future growth.
+
 
 ---
 
-markdown
 # 🚀 TaskMaster — From To-Do to Total Control
 
 **TaskMaster** is a task management app that begins as a simple to-do list and evolves into a feature-rich productivity platform. It’s a learning-friendly, open-source project built with **React** and **Bootstrap** — perfect for developers who want to see how a small app can grow into something powerful.
@@ -104,17 +103,5 @@ Let's build a powerful productivity tool — one commit at a time.
 
 ---
 
-## 📄 License
 
-Licensed under the [MIT License](LICENSE).
 
----
-
-**Built with ❤️ in React & Bootstrap — and growing with every release.**
-
-```
-
----
-
-Would you like me to generate a `CONTRIBUTING.md` file separately based on this content?
-```
