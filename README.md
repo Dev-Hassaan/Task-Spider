@@ -1,10 +1,9 @@
 
-
 ---
 
-# 🚀 TaskMaster — From To-Do to Total Control
+# 🕸️ Task Spider — From To-Do to Total Control
 
-**TaskMaster** is a task management app that begins as a simple to-do list and evolves into a feature-rich productivity platform. It’s a learning-friendly, open-source project built with **React** and **Bootstrap** — perfect for developers who want to see how a small app can grow into something powerful.
+**Task Spider** is a dynamic task management app that starts as a basic to-do list and grows into an advanced productivity solution. Built with **React** and **Bootstrap**, it’s designed for developers who want to watch a project evolve — feature by feature, step by step.
 
 ---
 
@@ -12,32 +11,32 @@
 
 > **"Start simple. Build smart. Scale endlessly."**
 
-The purpose of this project is to:
-- Demonstrate how to build a modern task manager from scratch
-- Incrementally add real-world features with clean and scalable code
-- Help contributors learn full-stack development step-by-step
-- Refactor and upgrade tools/architecture as needed throughout development
+The goal of Task Spider is to:
+- Build a task manager from scratch using modern tools
+- Evolve the project by adding new features in stages
+- Create clean, maintainable, and scalable code
+- Offer a welcoming environment for open-source contributors
 
 ---
 
-## ✅ Features (Work in Progress)
+## ✅ Features (In Progress)
 
 | Level        | Features                                                   |
 |--------------|------------------------------------------------------------|
 | 🟢 Basic      | Create, delete, and complete tasks                         |
-| 🟡 Mid-level  | Due dates, priorities, persistent data (localStorage)      |
-| 🔵 Advanced   | Filters, tags, reminders, progress tracking                |
-| 🔴 Pro        | Auth, team sharing, real-time sync, project dashboards     |
+| 🟡 Mid-level  | Due dates, priorities, localStorage support                |
+| 🔵 Advanced   | Tagging, filtering, reminders, progress tracking           |
+| 🔴 Pro        | User login, collaboration, real-time updates               |
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Frontend**: React (Vite or CRA), Bootstrap
-- **State Management**: useState / useContext (Redux or Zustand later)
-- **Styling**: Bootstrap (Tailwind or DaisyUI in future)
-- **Backend**: (Planned) Firebase or Node.js + MongoDB
-- **Deployment**: GitHub Pages / Netlify (for now)
+- **Frontend**: React (Vite), Bootstrap
+- **Styling**: Bootstrap (with Tailwind/DaisyUI possible later)
+- **State Management**: useState, useContext (Redux/Zustand later)
+- **Backend (Planned)**: Firebase or Node.js + MongoDB
+- **Deployment**: GitHub Pages / Netlify
 
 ---
 
@@ -45,63 +44,77 @@ The purpose of this project is to:
 
 ```bash
 src/
-├── components/    # Reusable UI elements
-├── pages/         # Page-level components
+├── components/    # UI building blocks
+├── pages/         # Application views
 ├── App.jsx        # Main app component
 ├── index.jsx      # Entry point
-└── index.css      # Bootstrap + custom styles
-
-
+└── index.css      # Styles including Bootstrap
 ```
+
 ---
+
 ## 🤝 Contributing
 
-We'd love your help! Whether you're fixing bugs, adding features, or improving documentation — you're welcome here.
+We welcome developers of all skill levels! Whether you're adding a small UI fix or building a new feature — your contributions matter.
 
 ### How to Contribute
 
 1. **Fork the repo**
-2. **Create a feature branch**
+2. **Create a new branch**
 
    ```bash
    git checkout -b feature/your-feature-name
    ```
-3. **Make your changes**
-4. **Commit and push**
+3. **Commit your changes**
 
    ```bash
    git commit -m "Add: your feature description"
+   ```
+4. **Push and open a Pull Request**
+
+   ```bash
    git push origin feature/your-feature-name
    ```
-5. **Open a Pull Request** — describe your changes clearly!
 
-### Guidelines
+### Contribution Guidelines
 
-* Stick to React functional components and hooks
-* Keep the UI clean and consistent with Bootstrap
-* Comment complex logic
-* Update documentation where needed
-* Be kind and respectful in all discussions
+* Use functional React components and hooks
+* Keep code readable and well-commented
+* Follow Bootstrap styling conventions
+* Respect the roadmap and existing architecture
+* Collaborate kindly — this is a learning-friendly space
 
 ---
 
 ## 📌 Roadmap
 
 * [x] Basic to-do functionality
-* [ ] Add localStorage support
-* [ ] Add due dates and priorities
-* [ ] UI filters and search
-* [ ] Firebase integration for real-time data
-* [ ] User login and multi-user task boards
+* [ ] Store tasks in localStorage
+* [ ] Add priority and due date support
+* [ ] Add filters and tag-based search
+* [ ] Integrate Firebase for real-time syncing
+* [ ] Add login system with auth
+* [ ] Support for collaborative task boards
 
 ---
 
-## 🙌 Show Support
+## 🙌 Support the Project
 
-Like this idea? Star ⭐ the repo, share feedback, or join in!
-Let's build a powerful productivity tool — one commit at a time.
+Like the project? Show support by:
+
+* ⭐ Starring the repo
+* Sharing feedback or ideas
+* Contributing a fix or feature
 
 ---
 
+## 📄 License
 
+Licensed under the [MIT License](LICENSE).
+
+---
+
+**Built with 🕷️ React, Bootstrap, and open-source spirit. Task Spider — let’s spin the web of productivity together.**
+
+```
 
