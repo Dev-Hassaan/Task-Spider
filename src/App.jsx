@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Container } from 'react-bootstrap'
 import './App.css'
-import Form from 'react-bootstrap/Form';
+import UserNavBar from './components/UserNavBar'
+import UserProgressBar from './components/UserProgressBar'
+import UserToDoList from './components/UserToDoList'
+import FloatingPlus from './components/FloatingPlus'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <UserNavBar></UserNavBar>
+      <Container>
+        <div className="mt-4 pt-3 mb-4">
+            <UserProgressBar></UserProgressBar>
+        </div>
+        <div className="mb-5">
+          <h1 className='h1'>To-Do</h1>
+        </div>
+        <div className="">
+          <UserToDoList></UserToDoList>
+        </div>
+      </Container>
+      <FloatingPlus></FloatingPlus>
     </>
   )
 }
