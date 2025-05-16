@@ -3,7 +3,7 @@
 
 # 🕸️ Task Spider — From To-Do to Total Control
 
-**Task Spider** is a dynamic task management app that starts as a basic to-do list and grows into an advanced productivity solution. Built with **React** and **Bootstrap**, it’s designed for developers who want to watch a project evolve — feature by feature, step by step.
+**Task Spider** is a dynamic task management web app that starts as a basic to-do list and grows into an advanced productivity solution. Built with **React** and **Bootstrap** (For now later the CSS Framework will be changed), it’s designed for developers who want to watch a project evolve — feature by feature, step by step.
 
 ---
 
@@ -35,7 +35,7 @@ The goal of Task Spider is to:
 - **Frontend**: React (Vite), Bootstrap
 - **Styling**: Bootstrap (with Tailwind/DaisyUI possible later)
 - **State Management**: useState, useContext (Redux/Zustand later)
-- **Backend (Planned)**: Firebase or Node.js + MongoDB
+- **Backend (Planned)**: Firebase or Node.js/Express.js + MongoDB
 - **Deployment**: GitHub Pages / Netlify
 
 ---
@@ -95,6 +95,12 @@ We welcome developers of all skill levels! Whether you're adding a small UI fix 
 * [ ] Integrate Firebase for real-time syncing
 * [ ] Add login system with auth
 * [ ] Support for collaborative task boards
+
+---
+
+## 🎨 Design
+
+Check out the **Task Spider** design on Figma: [Task Spider Design](https://www.figma.com/design/dmY7wEWy2yQvHXUSEnLNhU/Task-Spider?m=auto&t=FjJvbIYkIMS7ZMoX-1)
 
 ---
 
