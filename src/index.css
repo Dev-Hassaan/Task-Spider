@@ -1,10 +1,9 @@
-
 body {
   overflow-x: hidden;
 }
 
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -70,9 +69,16 @@ body {
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -124,9 +130,9 @@ body {
   --bs-form-invalid-border-color: #dc3545;
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme="dark"] {
   color-scheme: dark;
-  --bs-body-color: #EEEEEE;
+  --bs-body-color: #eeeeee;
   --bs-body-color-rgb: 222, 226, 230;
   --bs-body-bg: #031633;
   --bs-body-bg-rgb: 33, 37, 41;
@@ -180,8 +186,8 @@ body {
   --bs-form-invalid-border-color: #ea868f;
 }
 
-
-.progress, .progress-stacked {
+.progress,
+.progress-stacked {
   --bs-progress-height: 1rem !important;
   --bs-progress-font-size: 0.8rem !important;
 }
@@ -194,5 +200,15 @@ body {
 
 .list-group-item {
   border: unset !important;
-  border-bottom: 1px #DEE2E6 solid !important;
+  border-bottom: 1px #dee2e6 solid !important;
+}
+
+@media (max-width: 575.98px) {
+  .fs-sm-5 {
+    font-size: 1rem !important;
+  }
+  .floating-plus {
+    bottom: 60px;
+    right: 40px;
+  }
 }

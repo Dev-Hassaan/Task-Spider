@@ -1,8 +1,11 @@
 
-.flaoting-plus {
+.floating-plus {
   position: fixed;
   bottom: 80px;
   right: 80px;
+}
+.floating-icon {
+  font-size: 3rem;
 }
 .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
   display: block !important;

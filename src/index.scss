@@ -1,0 +1,19 @@
+/* stylesheet.scss */
+
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+//@import "bootstrap/scss/mixins/breakpoints";
+
+/* Your customizations here */
+
+$container-max-widths: (
+  xs: 420px,
+  sm: 540px,
+  md: 620px,
+  lg: 760px,
+  xl: 800px,
+  xxl: 900px,
+);
+
+@import "bootstrap";

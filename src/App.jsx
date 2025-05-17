@@ -14,7 +14,7 @@ function App() {
         <div className="mt-4 pt-3 mb-4">
             <UserProgressBar></UserProgressBar>
         </div>
-        <div className="mb-5">
+        <div className="mb-4">
           <h1 className='h1'>To-Do</h1>
         </div>
         <div className="">
