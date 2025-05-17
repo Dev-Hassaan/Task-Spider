@@ -4,15 +4,19 @@ import UserNavBar from './components/UserNavBar'
 import UserProgressBar from './components/UserProgressBar'
 import UserToDoList from './components/UserToDoList'
 import FloatingPlus from './components/FloatingPlus'
+import UserDialogeBox from './components/UserDialogeBox'
+import { useState } from 'react'
 
 function App() {
+
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <>
       <UserNavBar></UserNavBar>
       <Container>
         <div className="mt-4 pt-3 mb-4">
-            <UserProgressBar></UserProgressBar>
+          <UserProgressBar></UserProgressBar>
         </div>
         <div className="mb-4">
           <h1 className='h1'>To-Do</h1>
@@ -21,7 +25,11 @@ function App() {
           <UserToDoList></UserToDoList>
         </div>
       </Container>
-      <FloatingPlus></FloatingPlus>
+      <FloatingPlus handleModal={setModalShow}></FloatingPlus>
+      <UserDialogeBox
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      ></UserDialogeBox>
     </>
   )
 }

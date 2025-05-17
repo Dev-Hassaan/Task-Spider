@@ -203,6 +203,13 @@ body {
   border-bottom: 1px #dee2e6 solid !important;
 }
 
+.modal-header {
+  border-bottom: unset !important;
+}
+.modal-footer {
+  border-top: unset !important;
+}
+
 @media (max-width: 575.98px) {
   .fs-sm-5 {
     font-size: 1rem !important;
