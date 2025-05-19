@@ -1,23 +1,17 @@
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function UserToDoList() {
-    const todos = [
-        { id: 1, label: "First checkbox", badge: "High" },
-        { id: 2, label: "Second checkbox", badge:"Medium" },
-        { id: 3, label: "Third checkbox", badge:"Low" },
-    ];
-
-
+function UserToDoList({list, handleCheck}) {
     return (
         <ul className="list-group">
-            {todos.map(todo => (
-                <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center gap-3 py-lg-3 py-2 fs-5 fs-sm-5 ">
-                    <input className="form-check-input me-1" type="checkbox" value="" id={`checkbox${todo.id}`} defaultChecked={todo.id == 1 ? true : false} />
-                    <label className="form-check-label w-100" htmlFor={`checkbox${todo.id}`}>
-                        <span>{todo.label}</span>
+            {list.map((item, index) => (
+                <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center gap-3 py-lg-3 py-2">
+                    <input className="form-check-input me-1 fs-5 fs-sm-5" type="checkbox" value="" id={`checkbox${item.id}`} onChange={(e) => {handleCheck(e, index)}} defaultChecked={item.isChecked} />
+                    <label className="form-check-label w-100" htmlFor={ true ? `checkbox${item.id}` : ""}>
+                        <div className='fs-5 fs-sm-5 fw-medium'>{item.title}</div>
+                        <div className='fs-6 fs-sm-6 fw-light'>{item.description}</div>
                     </label>
-                    <span className="badge text-bg-primary rounded-pill">{todo.badge}</span>
+                    <span className="badge text-bg-primary rounded-pill">{item.badge}</span>
                 </li>
             ))}
         </ul>

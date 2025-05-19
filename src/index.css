@@ -214,6 +214,9 @@ body {
   .fs-sm-5 {
     font-size: 1rem !important;
   }
+  .fs-sm-6 {
+    font-size: 0.8rem !important;
+  }
   .floating-plus {
     bottom: 60px;
     right: 40px;

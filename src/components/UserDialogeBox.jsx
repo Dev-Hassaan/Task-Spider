@@ -22,15 +22,15 @@ export default function UserDialogeBox(props) {
                     label="Title"
                     className="mb-3"
                 >
-                    <Form.Control size='lg' type="text" placeholder="Title" />
+                    <Form.Control id='todo_title' size='lg' type="text" placeholder="Title" />
                 </FloatingLabel>
                 <FloatingLabel controlId="floatingPassword" label="Description">
-                    <Form.Control className='Hero' type="text" placeholder="Description" />
+                    <Form.Control id='todo_description' className='Hero' type="text" placeholder="Description" />
                 </FloatingLabel>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant='dark' onClick={props.onHide}>Close</Button>
-                <Button variant='primary' onClick={props.onHide}>Save</Button>
+                <Button variant='primary' onClick={props.addItem}>Save</Button>
             </Modal.Footer>
         </Modal>
     );
