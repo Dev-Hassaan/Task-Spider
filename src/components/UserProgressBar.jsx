@@ -12,7 +12,7 @@ function UserProgressBar({min, max, now}) {
   }, []);
 
 
-  return <ProgressBar now={now} label={`${now}%`} min={min} max={max} />;
+  return <ProgressBar now={now?now:3} label={`${now}%`} min={min} max={max} />;
 }
 
 export default UserProgressBar;

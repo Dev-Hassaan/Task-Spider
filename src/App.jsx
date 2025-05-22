@@ -5,34 +5,41 @@ import UserProgressBar from './components/UserProgressBar'
 import UserToDoList from './components/UserToDoList'
 import FloatingPlus from './components/FloatingPlus'
 import UserDialogeBox from './components/UserDialogeBox'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+import { setLocalStorage,getLocalStorage } from './utilities/LocalStorage'
 
 function App() {
 
   const [modalShow, setModalShow] = useState(false);
-  const [listData, seLlistData] = useState(
-    [{ id: 1, title: "First Task", description: "This is First Task To Do" , badge: "High", isChecked: true },
-    { id: 2, title: "Second Task", description: "This is Second Task To Do" , badge: "Medium", isChecked: false },
-    { id: 3, title: "Third Task", description: "This is Third Task To Do" , badge: "Low" , isChecked: false},]
-  );
+  const [listData, setListData] = useState([]);
+  const[edit, setEdit] = useState(false)
+
+  useEffect(()=>{
+    setListData(getLocalStorage())
+  },[])
 
   function addListItem() {
     const title = document.getElementById('todo_title').value;
     const description = document.getElementById('todo_description').value;
     const newItem = {
-      id: listData.length + 1,
+      id: listData?listData.length + 1:1,
       title: title,
       description: description,
       badge: "none",
       isChecked: false,
     }
-    seLlistData([...listData, newItem]);
+    const updatedList = listData ? [...listData, newItem]:[newItem]
+   setListData(updatedList)
+    setLocalStorage(updatedList)
     setModalShow(false);
+    document.getElementById('todo_title').value = '';
+document.getElementById('todo_description').value = '';
   }
 
   function checklist() {
     let count = 0
-    listData.forEach(function(item, index) {
+    if(listData){listData.forEach(function(item, index) {
       if (item.isChecked == true) {
         count++;
       }
@@ -40,11 +47,13 @@ function App() {
     
     return Math.round(count / listData.length * 100)
   }
+  return 0
+  }
 
   function handleCheck(e, i) {
     const isChecked = e.target.checked
     listData[i].isChecked = isChecked
-    seLlistData([...listData])
+    setListData([...listData])
   }
 
 
@@ -60,7 +69,8 @@ function App() {
           <h1 className='h1'>To-Do</h1>
         </div>
         <div className="">
-          <UserToDoList list={listData} handleCheck={handleCheck}></UserToDoList>
+          {listData? <UserToDoList list={listData} handleCheck={handleCheck}></UserToDoList>:null}
+          
         </div>
       </Container>
       <FloatingPlus handleModal={setModalShow} ></FloatingPlus>
