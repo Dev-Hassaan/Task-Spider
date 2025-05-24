@@ -18,13 +18,13 @@ export default function UserDialogeBox(props) {
             </Modal.Header>
             <Modal.Body>
                 <FloatingLabel
-                    controlId="floatingInput"
+                    
                     label="Title"
                     className="mb-3"
                 >
                     <Form.Control id='todo_title' size='lg' type="text" placeholder="Title" />
                 </FloatingLabel>
-                <FloatingLabel controlId="floatingPassword" label="Description">
+                <FloatingLabel label="Description">
                     <Form.Control id='todo_description' className='Hero' type="text" placeholder="Description" />
                 </FloatingLabel>
             </Modal.Body>
