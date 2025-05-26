@@ -11,11 +11,17 @@ import UserDialogeBox from './components/UserDialogeBox'
 
 function App() {
 
+
   const [modalShow, setModalShow] = useState(false);
   const [listData, setListData] = useState(
     [{ id: 1, title: "Write Your First Task", description: "Click the plus button to add more tasks", badge: "High", isChecked: true },]
   );
-  const [edit, setEdit] = useState(false)
+  const [theme, setTheme] = useState(localStorage.getItem("Theme") || "dark");
+
+  useEffect(() => {
+    document.body.setAttribute('data-bs-theme', theme)
+    localStorage.setItem("Theme", theme)
+  }, [theme])
 
   useEffect(() => {
     setListData(getLocalStorage() || listData)
@@ -59,11 +65,9 @@ function App() {
     setListData([...listData])
   }
 
-
-
   return (
     <>
-      <UserNavBar></UserNavBar>
+      <UserNavBar changeTheme={setTheme}></UserNavBar>
       <Container>
         <div className="mt-4 pt-3 mb-4">
           <UserProgressBar min={0} max={100} now={checklist()} />
